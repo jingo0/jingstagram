@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jingstagram/pages/home_page.dart';
 import 'package:jingstagram/pages/login_page.dart';
 import 'package:jingstagram/pages/register_page.dart';
 
@@ -13,12 +14,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Jingstagram',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: 'login',
+      initialRoute: 'home',
       routes: {
+        'home': (context) => HomePage(),
         'register': (context) => RegisterPage(),
         'login': (context) => LoginPage(),
       },
